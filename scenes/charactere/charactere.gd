@@ -7,6 +7,7 @@ var speed =200
 
 func _physics_process(delta):
 	vel.x=0
+	vel.y=0
 	var direction = 1
 	if Input.is_action_pressed("ui_left") :
 		vel.x -= speed
