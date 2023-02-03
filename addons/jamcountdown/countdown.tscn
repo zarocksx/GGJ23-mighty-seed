@@ -23,9 +23,9 @@ size_flags_vertical = 5
 theme = ExtResource( 4 )
 script = ExtResource( 1 )
 jam_title = "GameJam"
-month = 1
-day = 16
-hour = 16
+month = 2
+day = 5
+hour = 18
 minute = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

@@ -53,6 +53,14 @@ _global_script_class_icons={
 config/name="GGJ23-mighty-seed"
 config/icon="res://icon.png"
 
+[autoload]
+
+ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/jamcountdown/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg" )
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
