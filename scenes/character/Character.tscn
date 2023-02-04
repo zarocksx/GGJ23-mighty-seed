@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/character/character.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/GGJ_PC-01-e1629931778181.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Trail/Trail.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34, 18.5 )
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.243714, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.236282, 0.636719, 0.373932, 1, 0.0258026, 0.347656, 0.189244, 1 )
 
 [node name="Character" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -20,3 +27,7 @@ shape = SubResource( 1 )
 position = Vector2( -5.96046e-08, 0 )
 scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 2 )
+
+[node name="Trail" parent="." instance=ExtResource( 3 )]
+width_curve = SubResource( 2 )
+gradient = SubResource( 3 )
