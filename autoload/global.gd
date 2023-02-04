@@ -1,16 +1,14 @@
 extends Node
 
+var playersGamepadBinding = [null,null,null,null,null];
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func setPlayerGamepadBinding(player: int, binding: int):
+	playersGamepadBinding[player] = binding
+	pass
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func getPlayersBinded():
+	var bindedPlayers = []
+	for player in range(playersGamepadBinding.size()):
+		if playersGamepadBinding[player] != null :
+			bindedPlayers.push(player)
+	return bindedPlayers
