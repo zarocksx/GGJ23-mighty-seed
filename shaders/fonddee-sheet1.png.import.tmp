@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buisson.png-2049c7bd8e47b3cb1a04137edd80bd1a.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://assets/images/buisson.png"
-dest_files=[ "res://.import/buisson.png-2049c7bd8e47b3cb1a04137edd80bd1a.stex" ]
-
+source_file="res://sprites/allSprites/fonddee-sheet1.png"
 [params]
 
 compress/mode=0
