@@ -42,10 +42,10 @@ anchor_bottom = 1.0
 margin_bottom = -140.0
 custom_colors/font_color = Color( 0.247059, 0.196078, 0.160784, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Jeu de la global
-Game Jam"
+text = "Mighty Seeds"
 align = 1
 valign = 1
+uppercase = true
 
 [node name="ControllerButton" type="Button" parent="."]
 anchor_top = 0.575
