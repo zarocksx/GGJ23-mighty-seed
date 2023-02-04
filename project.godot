@@ -51,6 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GGJ23-mighty-seed"
+run/main_scene="res://scenes/charactere/Charactere.tscn"
 config/icon="res://icon.png"
 
 [autoload]
