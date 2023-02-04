@@ -51,6 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GGJ23-mighty-seed"
+run/main_scene="res://scenes/character/Character.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -59,7 +60,7 @@ ControllerIcons="*res://addons/controller_icons/ControllerIcons.gd"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/jamcountdown/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg", "res://addons/jamcountdown/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/ui_design_tool/plugin.cfg" )
 
 [input]
 
