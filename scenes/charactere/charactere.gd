@@ -24,10 +24,10 @@ func _physics_process(_delta):
 			if currentSpeed.x > 1:
 				currentSpeed.x = 0
 			
-	if Input.is_action_pressed("ui_up") && Input.get_axis("ui_left","ui_right") < DEADZONE:
-		vel.y =Input.get_axis("ui_down","ui_up")
-	elif Input.is_action_pressed("ui_down") && Input.get_axis("ui_left","ui_right") > (DEADZONE *- 1):
-		vel.y =Input.get_axis("ui_down", "ui_up")
+	if Input.is_action_pressed("ui_up") && Input.get_axis("ui_up","ui_down") < DEADZONE:
+		vel.y = Input.get_axis("ui_up","ui_down")
+	elif Input.is_action_pressed("ui_down") && Input.get_axis("ui_up","ui_down") > (DEADZONE*- 1):
+		vel.y = Input.get_axis("ui_up", "ui_down")
 	else:
 		if currentSpeed.y > 0 :
 			currentSpeed.y -= DECELERATION
@@ -51,7 +51,6 @@ func _physics_process(_delta):
 			currentSpeed.y = -MAXSPEED
 	print(currentSpeed)
 	
-	position.x = currentSpeed.x
-	position.y = currentSpeed.y
+	translate(currentSpeed)
 
 
