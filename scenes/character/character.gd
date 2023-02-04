@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 
 
@@ -6,7 +6,6 @@ export var vel = Vector2()
 export var MAXSPEED = 200
 export var ACCELERATION = 25
 export var DECELERATION = 25
-export var DEADZONE = 0.1
 export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 
@@ -40,17 +39,16 @@ func _physics_process(_delta):
 				currentSpeed.y = 0
 
 	if Input.is_action_pressed("gp_left_" + str(gamepad)) || Input.is_action_pressed("gp_right_" + str(gamepad)) || Input.is_action_pressed("gp_up_" + str(gamepad)) || Input.is_action_pressed("gp_down_" + str(gamepad)):
-		currentSpeed.x += vel.x*ACCELERATION
-		currentSpeed.y += vel.y*ACCELERATION
+		currentSpeed += vel*ACCELERATION
 		if currentSpeed.x > MAXSPEED :
 			currentSpeed.x = MAXSPEED
-		elif currentSpeed.x < -MAXSPEED:
-			currentSpeed.x = -MAXSPEED
+		elif currentSpeed.x < MAXSPEED * -1:
+			currentSpeed.x = MAXSPEED * -1
 		if currentSpeed.y > MAXSPEED :
 			currentSpeed.y = MAXSPEED
-		elif currentSpeed.y < -MAXSPEED:
-			currentSpeed.y = -MAXSPEED
+		elif currentSpeed.y < MAXSPEED * -1:
+			currentSpeed.y = MAXSPEED * -1
 
-	translate(currentSpeed)
+	move_and_collide(currentSpeed)
 
 

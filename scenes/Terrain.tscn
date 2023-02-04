@@ -3,48 +3,45 @@
 [ext_resource path="res://scenes/character/Character.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 511, 13 )
+extents = Vector2( 512.5, 10 )
 
-[sub_resource type="SegmentShape2D" id=2]
-a = Vector2( 2, 2 )
-b = Vector2( 2, 553 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 300 )
 
 [node name="Terrain" type="Node2D"]
-position = Vector2( 485, 304 )
 
 [node name="Charactere" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 50 )
 
 [node name="Charactere2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 98, 0 )
+position = Vector2( 930, 50 )
+gamepad = 1
 
 [node name="StaticBody2DHaut" type="StaticBody2D" parent="."]
-position = Vector2( -184, -57 )
-constant_linear_velocity = Vector2( 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DHaut"]
-position = Vector2( 208, -237 )
+position = Vector2( 512.5, -10 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2DBas" type="StaticBody2D" parent="."]
-position = Vector2( -184, -57 )
 constant_linear_velocity = Vector2( 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DBas"]
-position = Vector2( 212, 341 )
+position = Vector2( 512, 610 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2DGauche" type="StaticBody2D" parent="."]
-position = Vector2( -503, -291 )
+position = Vector2( -5, 0 )
 constant_linear_velocity = Vector2( 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DGauche"]
-position = Vector2( 19, 6 )
+position = Vector2( -4.875, 300 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2DDroite" type="StaticBody2D" parent="."]
-position = Vector2( -503, -291 )
+position = Vector2( 1025, -2 )
 constant_linear_velocity = Vector2( 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2DDroite"]
-position = Vector2( 1034, 8 )
+position = Vector2( 9, 302 )
 shape = SubResource( 2 )
