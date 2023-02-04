@@ -1,23 +1,22 @@
 extends Node2D
 
+
+
 export var vel = Vector2()
 export var MAXSPEED = 200
 export var ACCELERATION = 25
 export var DECELERATION = 25
 export var DEADZONE = 0.1
+export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 
-var connected_joypads = Input.get_connected_joypads()
-export var gamePadId = 0
-onready var currentDevice = connected_joypads[gamePadId]
-
+func _ready():
+	print(Input.get_connected_joypads(), "gp_up_" + str(gamepad))
 
 
 func _physics_process(_delta):
-	if Input.is_action_pressed("ui_left") && Input.get_axis("ui_left","ui_right") < DEADZONE:
-		vel.x =Input.get_joy_axis(gamePadId, JOY_AXIS_0)
-	elif Input.is_action_pressed("ui_right") && Input.get_axis("ui_left","ui_right") > (DEADZONE *- 1):
-		vel.x =Input.get_joy_axis(gamePadId, JOY_AXIS_0)
+	if Input.is_action_pressed("gp_left_" + str(gamepad)) || Input.is_action_pressed("gp_right_" + str(gamepad)):
+		vel.x = Input.get_joy_axis(gamepad, JOY_AXIS_0)
 	else :
 		if currentSpeed.x > 0 :
 			currentSpeed.x -= DECELERATION
@@ -27,11 +26,9 @@ func _physics_process(_delta):
 			currentSpeed.x += DECELERATION
 			if currentSpeed.x > 1:
 				currentSpeed.x = 0
-			
-	if Input.is_action_pressed("ui_up") && Input.get_axis("ui_up","ui_down") < DEADZONE:
-		vel.y = Input.get_joy_axis(gamePadId, JOY_AXIS_1)
-	elif Input.is_action_pressed("ui_down") && Input.get_axis("ui_up","ui_down") > (DEADZONE*- 1):
-		vel.y = Input.get_joy_axis(gamePadId, JOY_AXIS_1)
+
+	if Input.is_action_pressed("gp_up_" + str(gamepad)) || Input.is_action_pressed("gp_down_" + str(gamepad)):
+		vel.y = Input.get_joy_axis(gamepad, JOY_AXIS_1)
 	else:
 		if currentSpeed.y > 0 :
 			currentSpeed.y -= DECELERATION
@@ -41,8 +38,8 @@ func _physics_process(_delta):
 			currentSpeed.y += DECELERATION
 			if currentSpeed.y > 1:
 				currentSpeed.y = 0
-	
-	if Input.is_action_pressed("ui_right") || Input.is_action_pressed("ui_left") || Input.is_action_pressed("ui_up") || Input.is_action_pressed("ui_down"):
+
+	if Input.is_action_pressed("gp_left_" + str(gamepad)) || Input.is_action_pressed("gp_right_" + str(gamepad)) || Input.is_action_pressed("gp_up_" + str(gamepad)) || Input.is_action_pressed("gp_down_" + str(gamepad)):
 		currentSpeed.x += vel.x*ACCELERATION
 		currentSpeed.y += vel.y*ACCELERATION
 		if currentSpeed.x > MAXSPEED :
@@ -53,7 +50,7 @@ func _physics_process(_delta):
 			currentSpeed.y = MAXSPEED
 		elif currentSpeed.y < -MAXSPEED:
 			currentSpeed.y = -MAXSPEED
-	
+
 	translate(currentSpeed)
 
 
