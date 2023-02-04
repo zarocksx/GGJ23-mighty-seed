@@ -6,6 +6,9 @@
 
 [node name="Charactere" type="Node2D"]
 script = ExtResource( 1 )
+MAXSPEED = 1000
+ACCELERATION = 1
+DECELERATION = 1
 
 [node name="Area2D" type="Area2D" parent="."]
 
