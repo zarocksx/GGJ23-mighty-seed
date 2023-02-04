@@ -1,6 +1,7 @@
 extends Node2D
 
 
+
 export var vel = Vector2()
 export var MAXSPEED = 200
 export var ACCELERATION = 25
@@ -50,4 +51,7 @@ func _physics_process(_delta):
 			currentSpeed.y = -MAXSPEED
 	print(currentSpeed)
 	
+	position.x = currentSpeed.x
+	position.y = currentSpeed.y
+
 
