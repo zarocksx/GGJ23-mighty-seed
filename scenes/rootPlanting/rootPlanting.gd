@@ -3,7 +3,7 @@ extends Node2D
 var shape: Array = []
 var shapes: Array = []
 var indexShape: int = 0
-var isPlanting: bool = false
+export var isPlanting: bool = false
 var lastSeed: Vector2 = Vector2(0,0)
 export var distanceBetweenSeeds: float = 1
 
@@ -22,6 +22,7 @@ func plantSeed():
 func plantRoots():
 	plantSeed()
 	isPlanting = false
+	$"../Trail".clearTrail()
 
 	if shape.size() > 0:
 		GameLogic.addRoots(shape)
