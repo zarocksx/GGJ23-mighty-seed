@@ -1,0 +1,389 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://fonts/Montserrat/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Montserrat/Montserrat-ExtraLight.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/controller.png" type="Texture" id=3]
+[ext_resource path="res://scenes/lobby/Lobby.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.494118, 0.0627451, 0.0627451, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0666667, 0.254902, 0.054902, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 18
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0705882, 0.168627, 0.305882, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.215686, 0.0509804, 0.207843, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 18
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("left/top/VBoxContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("right/top/VBoxContainer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("left/bottom/VBoxContainer/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("right/bottom/VBoxContainer/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "blink"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("left/top/VBoxContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("right/top/VBoxContainer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("left/bottom/VBoxContainer/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("right/bottom/VBoxContainer/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -650, -204 )
+script = ExtResource( 4 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 2
+
+[node name="left" type="GridContainer" parent="GridContainer"]
+margin_right = 510.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top" type="CenterContainer" parent="GridContainer/left"]
+margin_right = 510.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/left/top"]
+margin_left = 131.0
+margin_top = 119.0
+margin_right = 378.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/left/top/VBoxContainer"]
+visible = false
+margin_right = 247.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="GridContainer/left/top/VBoxContainer"]
+margin_right = 247.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 1 )
+text = "Press any button"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PanelContainer" type="PanelContainer" parent="GridContainer/left/top/VBoxContainer"]
+margin_top = 35.0
+margin_right = 247.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="GridContainer/left/top/VBoxContainer/PanelContainer"]
+margin_right = 247.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 3 )
+text = "player 1"
+align = 1
+valign = 1
+
+[node name="bottom" type="CenterContainer" parent="GridContainer/left"]
+margin_top = 300.0
+margin_right = 510.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/left/bottom"]
+margin_left = 131.0
+margin_top = 119.0
+margin_right = 378.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/left/bottom/VBoxContainer"]
+visible = false
+margin_right = 247.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="GridContainer/left/bottom/VBoxContainer"]
+margin_right = 247.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 4 )
+text = "Press any button"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PanelContainer" type="PanelContainer" parent="GridContainer/left/bottom/VBoxContainer"]
+margin_top = 35.0
+margin_right = 247.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Label" type="Label" parent="GridContainer/left/bottom/VBoxContainer/PanelContainer"]
+margin_right = 247.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 6 )
+text = "player 1"
+align = 1
+valign = 1
+
+[node name="right" type="GridContainer" parent="GridContainer"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="top" type="CenterContainer" parent="GridContainer/right"]
+margin_right = 510.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/right/top"]
+margin_left = 131.0
+margin_top = 119.0
+margin_right = 378.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/right/top/VBoxContainer"]
+visible = false
+margin_right = 247.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="GridContainer/right/top/VBoxContainer"]
+margin_right = 247.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 7 )
+text = "Press any button"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PanelContainer" type="PanelContainer" parent="GridContainer/right/top/VBoxContainer"]
+margin_top = 35.0
+margin_right = 247.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 8 )
+
+[node name="Label" type="Label" parent="GridContainer/right/top/VBoxContainer/PanelContainer"]
+margin_right = 247.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 9 )
+text = "player 1"
+align = 1
+valign = 1
+
+[node name="bottom" type="CenterContainer" parent="GridContainer/right"]
+margin_top = 300.0
+margin_right = 510.0
+margin_bottom = 596.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/right/bottom"]
+margin_left = 131.0
+margin_top = 119.0
+margin_right = 378.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/right/bottom/VBoxContainer"]
+visible = false
+margin_right = 247.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="GridContainer/right/bottom/VBoxContainer"]
+margin_right = 247.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 10 )
+text = "Press any button"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PanelContainer" type="PanelContainer" parent="GridContainer/right/bottom/VBoxContainer"]
+margin_top = 35.0
+margin_right = 247.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Label" type="Label" parent="GridContainer/right/bottom/VBoxContainer/PanelContainer"]
+margin_right = 247.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 12 )
+text = "player 1"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GridContainer"]
+autoplay = "blink"
+anims/RESET = SubResource( 13 )
+anims/blink = SubResource( 14 )

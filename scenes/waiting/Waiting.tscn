@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/controller_icons/objects/Button.gd" type="Script" id=1]
+[ext_resource path="res://addons/controller_icons/assets/xbox360/a.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Black.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "blink"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ControllerButton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2, 1.7, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Waiting" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -140.0
+custom_colors/font_color = Color( 0.247059, 0.196078, 0.160784, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Mighty Seeds"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="ControllerButton" type="Button" parent="."]
+anchor_top = 0.575
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 432.5
+margin_top = 64.0
+margin_right = -432.5
+margin_bottom = -40.0
+icon = ExtResource( 2 )
+flat = true
+icon_align = 1
+script = ExtResource( 1 )
+path = "joypad/a"
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.422
+anchor_top = 0.575
+anchor_right = 0.578
+anchor_bottom = 0.933
+margin_left = 7.87198
+margin_top = -3.05176e-05
+margin_right = -7.87201
+margin_bottom = -150.8
+custom_colors/font_color = Color( 0.247059, 0.196078, 0.160784, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Jouer"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "blink"
+anims/blink = SubResource( 3 )
