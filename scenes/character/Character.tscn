@@ -9,16 +9,16 @@ radius = 6.0
 
 [node name="Character" type="KinematicBody2D" groups=["players"]]
 script = ExtResource( 1 )
-MAXSPEED = 10
-ACCELERATION = 10
-DECELERATION = 10
+MAXSPEED = 5.0
+ACCELERATION = 0.2
+DECELERATION = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 2.38419e-07, 2.38419e-07 )
-scale = Vector2( 0.105, 0.105 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="RootPlanting" parent="." instance=ExtResource( 3 )]

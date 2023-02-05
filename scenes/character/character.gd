@@ -3,9 +3,9 @@ extends KinematicBody2D
 
 
 export var vel = Vector2()
-export var MAXSPEED = 200
-export var ACCELERATION = 25
-export var DECELERATION = 25
+export var MAXSPEED: float = 200
+export var ACCELERATION: float = 25
+export var DECELERATION: float = 25
 export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 onready var rootPlant = get_node("RootPlanting")
@@ -59,5 +59,6 @@ func _physics_process(_delta):
 				currentSpeed.y = 0
 
 	move_and_collide(currentSpeed)
+	print(currentSpeed)
 
 
