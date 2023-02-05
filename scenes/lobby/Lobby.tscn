@@ -409,4 +409,3 @@ anims/blink = SubResource( 14 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GridContainer"]
 stream = ExtResource( 5 )
-autoplay = true

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/317383__satanen__german-techno-loop.wav-860dac40d0f0623e7fabc7dd2d470b33.sample"
+
+[deps]
+
+source_file="res://scenes/terrain/317383__satanen__german-techno-loop.wav"
+dest_files=[ "res://.import/317383__satanen__german-techno-loop.wav-860dac40d0f0623e7fabc7dd2d470b33.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

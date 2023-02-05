@@ -14,6 +14,7 @@ func _input(event):
 	if event is InputEventJoypadButton and event.button_index == JOY_BUTTON_0 and event.pressed and playerToSet < 4:
 		print(event.device)
 		if !Global.checkIfPLayerExist(event):
+			
 			match playerToSet:
 				0:
 					$GridContainer/left/top/VBoxContainer/TextureRect.visible = true
@@ -28,7 +29,8 @@ func _input(event):
 					$GridContainer/right/bottom/VBoxContainer/TextureRect.visible = true
 					$GridContainer/right/bottom/VBoxContainer/Label.visible = false
 			playerToSet += 1
-			$AudioStreamPlayer
+			if visible:
+				$GridContainer/AudioStreamPlayer.play()
 	pass
 
 
