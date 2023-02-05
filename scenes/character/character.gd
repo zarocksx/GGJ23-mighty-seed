@@ -9,9 +9,10 @@ export var DECELERATION = 25
 export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 
+
 func _ready():
 	print(Input.get_connected_joypads(), "gp_up_" + str(gamepad))
-
+	
 
 func _physics_process(_delta):
 	if Input.is_action_pressed("gp_left_" + str(gamepad)) || Input.is_action_pressed("gp_right_" + str(gamepad)):
