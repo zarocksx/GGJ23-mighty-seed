@@ -28,7 +28,7 @@ func _input(event):
 					$GridContainer/right/bottom/VBoxContainer/TextureRect.visible = true
 					$GridContainer/right/bottom/VBoxContainer/Label.visible = false
 			playerToSet += 1
-		
+			$AudioStreamPlayer
 	pass
 
 

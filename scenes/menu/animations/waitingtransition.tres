@@ -1,4 +1,6 @@
-[gd_resource type="Animation" format=2]
+[gd_resource type="Animation" load_steps=2 format=2]
+
+[ext_resource path="res://assets/sounds/427247__get_accel__9-bush.wav" type="AudioStream" id=1]
 
 [resource]
 resource_name = "transition"
@@ -88,4 +90,18 @@ tracks/6/keys = {
 "args": [  ],
 "method": "changeScene"
 } ]
+}
+tracks/7/type = "audio"
+tracks/7/path = NodePath("AudioStreamPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": [ {
+"end_offset": 1.0,
+"start_offset": 1.0,
+"stream": ExtResource( 1 )
+} ],
+"times": PoolRealArray( 1.4 )
 }

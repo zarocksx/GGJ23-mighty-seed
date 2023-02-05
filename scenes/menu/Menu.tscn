@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/waiting/Waiting.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/decor/background-sheet1.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scenes/lobby/Lobby.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/images/decor/buisson.png" type="Texture" id=6]
 [ext_resource path="res://shaders/2d_wind_sway.tres" type="Shader" id=7]
+[ext_resource path="res://assets/sounds/596498__szegvari__ethno-world-music-thriller-atmo-dark-horror-beat-dance-flute-low-chill-eq-mastered.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/427247__get_accel__9-bush.wav" type="AudioStream" id=9]
 
 [sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 7 )
@@ -195,7 +197,7 @@ texture = ExtResource( 6 )
 
 [node name="Buisson5" type="Sprite" parent="bushs"]
 material = SubResource( 15 )
-position = Vector2( 246, 850 )
+position = Vector2( 246, 770 )
 rotation = 0.851665
 scale = Vector2( 1.27284, 1.28849 )
 texture = ExtResource( 6 )
@@ -237,7 +239,7 @@ texture = ExtResource( 6 )
 
 [node name="Buisson6" type="Sprite" parent="bushs"]
 material = SubResource( 15 )
-position = Vector2( -229.988, -288.938 )
+position = Vector2( -232, -291 )
 rotation = 0.851665
 scale = Vector2( 1.6228, 1.64275 )
 texture = ExtResource( 6 )
@@ -251,7 +253,7 @@ texture = ExtResource( 6 )
 
 [node name="Buisson7" type="Sprite" parent="bushs"]
 material = SubResource( 15 )
-position = Vector2( 1534.29, 203.861 )
+position = Vector2( 1537, 204 )
 rotation = 0.851665
 scale = Vector2( 1.43831, 1.45599 )
 texture = ExtResource( 6 )
@@ -276,3 +278,10 @@ position = Vector2( 614, -400 )
 rotation = 0.680012
 scale = Vector2( 1.64863, 1.79661 )
 texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
