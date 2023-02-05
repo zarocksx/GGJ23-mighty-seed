@@ -1,6 +1,6 @@
 extends Node
 
-var playersGamepadBinding = [null,null,null,null,null];
+var playersGamepadBinding = [null,null,null,null];
 
 func setPlayerGamepadBinding(player: int, binding: int):
 	playersGamepadBinding[player] = binding

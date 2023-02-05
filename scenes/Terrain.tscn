@@ -17,7 +17,7 @@ extents = Vector2( 127.5, 104.5 )
 script = ExtResource( 3 )
 
 [node name="Character" parent="." instance=ExtResource( 1 )]
-position = Vector2( 48, 40 )
+position = Vector2( 124, 317 )
 scale = Vector2( 3, 3 )
 
 [node name="StaticBody2DHaut" type="StaticBody2D" parent="."]
