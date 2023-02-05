@@ -1,13 +1,13 @@
 extends Node2D
 
 var shape: Array = []
-var shapes = []
-var indexShape = 0
-var isPlanting = false
+var shapes: Array = []
+var indexShape: int = 0
+var isPlanting: bool = false
 var lastSeed: Vector2 = Vector2(0,0)
-export var distanceBetweenSeeds = 1
+export var distanceBetweenSeeds: float = 1
 
-onready var player = get_parent()
+onready var player: Node = get_parent()
 
 func startPlanting():
 	lastSeed = Vector2(0,0)
