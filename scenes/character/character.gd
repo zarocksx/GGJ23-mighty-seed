@@ -10,6 +10,7 @@ export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 onready var rootPlant = get_node("RootPlanting")
 
+
 func _ready():
 	print("player : ", str(gamepad), " is ready")
 
