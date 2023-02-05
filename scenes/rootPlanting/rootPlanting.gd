@@ -22,7 +22,6 @@ func plantSeed():
 func plantRoots():
 	plantSeed()
 	isPlanting = false
-	print("plant root")
 
 	if shape.size() > 0:
 		GameLogic.addRoots(shape)
