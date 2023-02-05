@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/Trail/Trail.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 6.0
+radius = 0.1
 
 [node name="Character" type="KinematicBody2D" groups=["players"]]
 script = ExtResource( 1 )

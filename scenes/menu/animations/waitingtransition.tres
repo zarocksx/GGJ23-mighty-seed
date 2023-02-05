@@ -86,6 +86,6 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "changeScene"
+"method": "nextScene"
 } ]
 }

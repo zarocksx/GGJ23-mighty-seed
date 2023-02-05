@@ -1,10 +1,9 @@
 extends Node
 
-onready var terrain = get_node("/root/Terrain")
+onready var terrain = get_node("/root/Menu/Terrain")
 
 
 func addRoots(shape):
-	print('addroots')
 	var poly = Polygon2D.new()
 	poly.set_polygon(shape)
 	terrain.add_child(poly)

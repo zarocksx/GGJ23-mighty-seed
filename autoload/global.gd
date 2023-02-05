@@ -3,10 +3,11 @@ extends Node
 var playersGamepadBinding = [null,null,null,null];
 var playerIndexToSet = 0
 
-func setPlayerGamepadBinding(player: int, binding: int):
+func setPlayerGamepadBinding(player: int, binding: int) -> void:
 	playersGamepadBinding[player] = binding
-	pass
-func checkIfPLayerExist(event: InputEventJoypadButton):
+
+
+func checkIfPLayerExist(event: InputEventJoypadButton) -> bool:
 	for playerId in 4:
 		print("Checking " + str(playerId))
 		if playersGamepadBinding[playerId] == event.device:
@@ -15,9 +16,12 @@ func checkIfPLayerExist(event: InputEventJoypadButton):
 	playersGamepadBinding[playerIndexToSet] = event.device
 	playerIndexToSet += 1
 	return false
-func getPlayersBinded():
+
+func getPlayersBinded() -> Array:
 	var bindedPlayers = []
 	for player in range(playersGamepadBinding.size()):
 		if playersGamepadBinding[player] != null :
-			bindedPlayers.push(player)
+			bindedPlayers.append(player)
 	return bindedPlayers
+
+
