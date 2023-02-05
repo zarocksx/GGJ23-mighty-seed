@@ -10,10 +10,6 @@ export var gamepad = 0
 var currentSpeed = Vector2(0,0)
 onready var rootPlant = get_node("RootPlanting")
 
-
-func _ready():
-	print("player : ", str(gamepad), " is ready")
-
 func validateRoots():
 	rootPlant.plantRoots()
 
@@ -59,6 +55,5 @@ func _physics_process(_delta):
 				currentSpeed.y = 0
 
 	move_and_collide(currentSpeed)
-	print(currentSpeed)
 
 
